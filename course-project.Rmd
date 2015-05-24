@@ -1,11 +1,11 @@
 ---
 title: "Course Project - Practical Machine Learning"
 author: "Stefanie Thiem"
-date: "21 May 2015"
+date: "24 May 2015"
 output: html_document
 ---
 
-This project analyses data from accelerometers on the belt, forearm, arm, and dumbell of 6 participants. They were asked to perform barbell lifts correctly and incorrectly in 5 different ways. The data for this project is taken from the homepage (http://groupware.les.inf.puc-rio.br/har)[http://groupware.les.inf.puc-rio.br/har]. This website also contains further information on the data set. 
+This project analyses data from accelerometers on the belt, forearm, arm, and dumbell of 6 participants. They were asked to perform barbell lifts correctly and incorrectly in 5 different ways. The data for this project is taken from the homepage http://groupware.les.inf.puc-rio.br/har. This website also contains further information on the data set. 
 
 The goal is to predict how well the partipants performed the barbell lifts (categorized in classes A-E). We apply machine learning techniques to build a classifier which we then use to predict the class for the 20 provided test cases.
 
@@ -76,7 +76,7 @@ Unfortunately, the accuracy for this model is quite low with 56% on the training
 
 A more advances approach is to use Random Forests which is an ensemble learning method for classification and operates by constructing a multitude of decision trees. It also has the advantage of reducing overfitting which is a common draw back of decision trees. However, it comes at the cost of running time. We here restrict the algorithm to only do cross validation with 4 sub samples instead of more advanced methods.
 ```{r, cache=TRUE}
-modelFit_randomForest <- suppressMessages(train(training$classe ~ ., method="rf", trControl=trainControl(method = "cv", number = 4), data=training))
+modelFit_randomForest <- suppressMessages(train(training$classe ~ ., method="rf", trControl=trainControl(method = "cv", number = 3), data=training))
 modelFit_randomForest
 ```
 
