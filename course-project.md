@@ -1,6 +1,6 @@
 # Course Project - Practical Machine Learning
 Stefanie Thiem  
-24 May 2015  
+12 June 2015  
 
 This project analyses data from accelerometers on the belt, forearm, arm, and dumbell of 6 participants. They were asked to perform barbell lifts correctly and incorrectly in 5 different ways. The data for this project is taken from the homepage http://groupware.les.inf.puc-rio.br/har. This website also contains further information on the data set. 
 
